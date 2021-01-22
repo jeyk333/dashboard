@@ -28,5 +28,17 @@ export const Styles = () => ({
       padding: 10,
       color: "#fff",
     },
+    "& .MuiInput-underline": {
+      fontSize: 12,
+      marginLeft: 10,
+      marginTop: 3,
+      width: "50%",
+      "& svg": {
+        marginTop: -2,
+      },
+      "&:before": {
+        display: "none",
+      },
+    },
   },
 });

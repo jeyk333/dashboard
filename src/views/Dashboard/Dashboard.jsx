@@ -1,8 +1,19 @@
 import React, { useState } from "react";
-import { withStyles, Typography, Grid } from "@material-ui/core";
+import {
+  withStyles,
+  Typography,
+  Grid,
+  Select,
+  MenuItem,
+  Button,
+} from "@material-ui/core";
+import ReactTooltip from "react-tooltip";
 import { Styles } from "./styles";
 import DetailCard from "../../components/DetailCard";
-import { CARD_DATA } from "../../constants";
+import { CARD_DATA, CHART_DATA, YEAR_LIST } from "../../constants";
+import Charts from "../../components/Charts";
+import Map from "../../components/Map";
+import SummaryChart from "../../components/SummaryChart";
 
 const Dashboard = ({ classes }) => {
   const [SelectStats, setSelectStats] = useState({
@@ -11,6 +22,9 @@ const Dashboard = ({ classes }) => {
     NewOrders: 1,
     OpenComplaints: 1,
   });
+  const [Content, setContent] = useState("");
+  const [Year, setYear] = useState(0);
+  const [Time, setTime] = useState(0);
 
   const handleChangeSelect = (e) => {
     console.log(e.target);
@@ -34,7 +48,50 @@ const Dashboard = ({ classes }) => {
             ))}
           </Grid>
         </div>
-        cool
+        <div className={classes.charts}>
+          <Grid container spacing={3}>
+            <Grid item xs={6}>
+              <Charts data={CHART_DATA} />
+              <SummaryChart />
+              <div className={classes.rangeFlex}>
+                <Typography className={classes.range}>RANGE:</Typography>
+                <Select
+                  value={Year}
+                  onChange={(e) => setYear(e.target.value)}
+                  className={classes.select}
+                >
+                  {YEAR_LIST.map((year) => (
+                    <MenuItem value={year.id}>{year.value}</MenuItem>
+                  ))}
+                </Select>
+              </div>
+            </Grid>
+            <Grid item xs={6}>
+              <div className={classes.mapSize}>
+                <Map setContent={setContent} />
+                <ReactTooltip>{Content}</ReactTooltip>
+              </div>
+              <div className={classes.mapFlex}>
+                <Select
+                  value={Time}
+                  onChange={(e) => setTime(e.target.value)}
+                  className={classes.select}
+                >
+                  {YEAR_LIST.map((year) => (
+                    <MenuItem value={year.id}>{year.value}</MenuItem>
+                  ))}
+                </Select>
+                <Button
+                  variant="contained"
+                  className={`${classes.button} ${classes.buttonRight}`}
+                >
+                  <span className={classes.buttonSpan}>EXPORT</span>{" "}
+                  <i class="fas fa-arrow-down"></i>
+                </Button>
+              </div>
+            </Grid>
+          </Grid>
+        </div>
       </div>
     </div>
   );

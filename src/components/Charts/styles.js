@@ -1,23 +1,21 @@
 export const Styles = () => ({
-  root: {
-    backgroundColor: "#f8f8f8",
-    padding: "30px 0",
-  },
-  container: {
-    width: "90%",
-    margin: "0 auto",
-  },
   title: {
     color: "#707a82",
   },
-  cardsWrapper: {
-    marginTop: 40,
+  header: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
-  charts: {
-    marginTop: 10,
+  icons: {
+    "& i": {
+      color: "#f1f1f1",
+      fontSize: 22,
+      marginLeft: 20,
+    },
   },
-  mapSize: {
-    width: "100%",
+  flexSelect: {
+    flex: 1,
   },
   select: {
     fontSize: 12,
@@ -35,21 +33,9 @@ export const Styles = () => ({
       display: "none",
     },
   },
-  rangeFlex: {
+  footerActions: {
     display: "flex",
     alignItems: "center",
-    marginTop: 20,
-    marginLeft: 20,
-  },
-  range: {
-    fontSize: 12,
-    color: "#707a82",
-  },
-  mapFlex: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    marginTop: 20,
   },
   button: {
     backgroundColor: "#e0e2e5",
@@ -66,5 +52,11 @@ export const Styles = () => ({
   buttonSpan: {
     fontSize: 10,
     padding: "5px 20px 5px 10px",
+  },
+  buttonRight: {
+    marginRight: 20,
+  },
+  root: {
+    marginBottom: 20,
   },
 });
