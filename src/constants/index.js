@@ -1,0 +1,68 @@
+//Card Data
+export const CARD_DATA = [
+  {
+    id: 0,
+    value: "2 674 862",
+    price: true,
+    title: "TOTAL PROFIT",
+    percentage: "4.5",
+    profit: true,
+    label: "TotalProfit",
+    stats: [
+      { id: 0, value: "DAILY STATS" },
+      { id: 1, value: "MONTHLY STATS" },
+      { id: 2, value: "YEARLY STATS" },
+    ],
+    icon: "fa-database",
+    iconColor: "#3cbfd7",
+  },
+  {
+    id: 1,
+    value: "657",
+    price: false,
+    title: "ACTIVE USERS",
+    percentage: "8.5",
+    profit: true,
+    label: "ActiveUsers",
+    stats: [
+      { id: 0, value: "DAILY STATS" },
+      { id: 1, value: "MONTHLY STATS" },
+      { id: 2, value: "YEARLY STATS" },
+    ],
+
+    icon: "fa-user",
+    iconColor: "#c0d954",
+  },
+  {
+    id: 2,
+    value: "245",
+    price: false,
+    title: "NEW ORDERS",
+    percentage: "3.9",
+    profit: true,
+    label: "NewOrders",
+    stats: [
+      { id: 0, value: "DAILY STATS" },
+      { id: 1, value: "MONTHLY STATS" },
+      { id: 2, value: "YEARLY STATS" },
+    ],
+    icon: "fa-boxes",
+    iconColor: "#f89832",
+  },
+  {
+    id: 3,
+    value: "12",
+    price: false,
+    title: "OPEN COMPLAINTS",
+    percentage: "5.3",
+    profit: false,
+    label: "OpenComplaints",
+    stats: [
+      { id: 0, value: "DAILY STATS" },
+      { id: 1, value: "MONTHLY STATS" },
+      { id: 2, value: "YEARLY STATS" },
+    ],
+    icon: "fa-ellipsis-h",
+    iconColor: "#f55151",
+  },
+];
