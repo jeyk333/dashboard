@@ -6,7 +6,7 @@ import { SUMMARY_DATA } from "../../constants";
 
 const SummaryChart = ({ classes }) => {
   return (
-    <Card>
+    <Card className={classes.root}>
       <CardContent>
         <div className={classes.header}>
           <Typography variant="h5" className={classes.title}>

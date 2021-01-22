@@ -50,7 +50,7 @@ const Dashboard = ({ classes }) => {
         </div>
         <div className={classes.charts}>
           <Grid container spacing={3}>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={12} lg={6} xl={6}>
               <Charts data={CHART_DATA} />
               <SummaryChart />
               <div className={classes.rangeFlex}>
@@ -66,7 +66,7 @@ const Dashboard = ({ classes }) => {
                 </Select>
               </div>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={12} lg={6} xl={6}>
               <div className={classes.mapSize}>
                 <Map setContent={setContent} />
                 <ReactTooltip>{Content}</ReactTooltip>

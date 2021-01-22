@@ -1,4 +1,4 @@
-export const Styles = () => ({
+export const Styles = (theme) => ({
   title: {
     color: "#707a82",
   },
@@ -31,6 +31,9 @@ export const Styles = () => ({
     },
     "&:before": {
       display: "none",
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "55%",
     },
   },
   footerActions: {

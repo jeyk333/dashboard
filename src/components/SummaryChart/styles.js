@@ -1,4 +1,4 @@
-export const Styles = () => ({
+export const Styles = (theme) => ({
   title: {
     color: "#707a82",
   },
